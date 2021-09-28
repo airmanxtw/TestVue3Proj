@@ -1,11 +1,9 @@
-import {createApp} from "vue"
-const Init={
-    data() {
-        return {
-            title:"hello"
-        }
-    },
-}
+import { createApp, h } from "vue"
+import main from "components/main";
 
-createApp(Init).mount("#app");
+const init={
+    render(){return h(main)}
+};
+
+createApp(init).mount("#app");
 

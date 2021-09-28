@@ -94,6 +94,11 @@ module.exports = {
             resourceRegExp: /^\.\/locale$/,
             contextRegExp: /moment$/,
         }),
+        new webpack.DefinePlugin({
+            // Drop Options API from bundle
+            __VUE_OPTIONS_API__: true,
+            __VUE_PROD_DEVTOOLS__: false
+        }),
     ],
     resolve: {
         extensions: ['.js', '.vue'],
